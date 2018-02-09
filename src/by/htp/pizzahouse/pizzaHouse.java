@@ -70,12 +70,16 @@ public class pizzaHouse {
 	}
 
 	public void deliverPizza(String name, int size, String spicy, String cheese) {
-		System.out.println("Your " + name + ", " + size + "cm, " + spicy+ ", " + cheese);
-		// Choose price depending on cheese
-		if (cheese.equals("with doublecheese"))
-			System.out.println("11 dollars please");
-		else
-			System.out.println("10 dollars please");
+		if (name.equals("Invalid name") || size == 0)
+			System.out.println("You type somthing wrong, budy! Try again!");
+		else {
+			System.out.println("Your " + name + ", " + size + "cm, " + spicy + ", " + cheese);
+			// Choose price depending on cheese
+			if (cheese.equals("with doublecheese"))
+				System.out.println("11 dollars please");
+			else
+				System.out.println("10 dollars please");
+		}
 	}
 
 }
